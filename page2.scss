@@ -1,0 +1,94 @@
+@use 'variables' as v;
+
+.main_cl {
+    padding-top: 120px; 
+    padding-bottom: 100px;
+}
+
+.portfolio-header {
+    text-align: center;
+    margin-bottom: 80px;
+
+    .page_title {
+        font-size: clamp(1.5rem, 5vw, 3rem);
+        letter-spacing: 15px;
+        font-weight: 300;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+
+    .subtitle {
+        font-size: 11px;
+        letter-spacing: 4px;
+        color: v.$gray-muted;
+        text-transform: uppercase;
+    }
+}
+
+.filters {
+    @include v.flex-center;
+    gap: 30px;
+    margin-bottom: 60px;
+
+    @include v.tablet {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .filter-btn {
+        background: none;
+        border: none;
+        color: v.$gray-muted;
+        font-size: 10px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        cursor: pointer;
+        padding-bottom: 5px;
+        border-bottom: 1px solid transparent;
+        @include v.transition;
+
+        &:hover {
+            color: v.$white;
+        }
+
+        &.active {
+            color: v.$white;
+            border-bottom-color: v.$white;
+        }
+    }
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+
+    @include v.tablet {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+
+    @media (max-width: v.$mobile) {
+        grid-template-columns: 1fr; 
+    }
+
+    .card {
+        aspect-ratio: 1 / 1; 
+        overflow: hidden;
+        background-color: #111;
+        border: 1px solid rgba(255, 255, 255, 0.05); 
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%); 
+            @include v.transition(all, 0.5s);
+            display: block;
+
+            &:hover {
+                filter: grayscale(0%);
+                transform: scale(1.05);
+            }
+        }
+    }
+}

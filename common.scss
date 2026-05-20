@@ -1,0 +1,153 @@
+@use 'variables' as v;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: v.$black;
+    color: v.$white;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: v.$container-max;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.naav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(v.$black, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    
+    .verh {
+        height: 80px;
+        @include v.flex-between;
+    }
+
+    .info {
+        display: flex;
+        gap: 35px;
+
+        a {
+            color: v.$gray-light;
+            text-decoration: none;
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            @include v.transition(color, 0.3s);
+            
+            &:hover, &.active { 
+                color: v.$white; 
+            }
+        }
+
+        @include v.tablet { 
+            display: none; 
+            flex-direction: column;
+            position: absolute;
+            top: 80px;
+            left: 0;
+            width: 100%;
+            background: v.$black;
+            padding: 40px 0;
+            text-align: center;
+            border-bottom: 1px solid v.$gray-dark;
+            gap: 25px;
+        }
+    }
+}
+
+.menu-toggle {
+    display: none; 
+}
+
+.burger-icon {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 6px;
+    z-index: 1100;
+
+    span {
+        display: block;
+        width: 22px;
+        height: 1px; 
+        background-color: v.$white;
+        @include v.transition;
+    }
+
+    @include v.tablet {
+        display: flex; 
+    }
+}
+
+.menu-toggle:checked {
+    & ~ .info {
+        @include v.tablet {
+            display: flex;
+        }
+    }
+
+    & ~ .burger-icon {
+        span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        span:nth-child(2) { opacity: 0; }
+        span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    }
+}
+
+.footer_cl {
+    padding: 60px 0;
+    border-top: 1px solid v.$gray-dark;
+    background-color: v.$black;
+
+    .footer_content {
+        @include v.flex-between;
+        
+        @include v.tablet {
+            flex-direction: column;
+            gap: 30px;
+            text-align: center;
+        }
+    }
+
+    .copyright {
+        font-size: 10px;
+        letter-spacing: 2px;
+        color: v.$gray-muted;
+        text-transform: uppercase;
+    }
+
+    .socials {
+        display: flex;
+        gap: 25px;
+
+        a {
+            font-size: 10px;
+            letter-spacing: 2px;
+            color: v.$gray-muted;
+            text-decoration: none;
+            text-transform: uppercase;
+            @include v.transition;
+
+            &:hover {
+                color: v.$white;
+            }
+        }
+    }
+}
+
+.inna-logo {
+    svg {
+        height: 30px;
+        width: auto;
+    }
+}

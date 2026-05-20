@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рабочий Процесс</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="page4.css">
+    <link rel="stylesheet" href="Data.xml">
+</head>
+<body>
+
+<nav class="naav">
+     <div class="verh container">
+      <a href="page1.html" class="inna-logo">
+        <svg viewBox="0 0 100 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <line x1="15" y1="5" x2="15" y2="35" stroke="white" stroke-width="2.5"/>
+         <path d="M40 35L50 5" stroke="#555" stroke-width="1.5" stroke-linecap="round"/>
+         <path d="M65 5H75C83 5 90 12 90 20C90 28 83 35 75 35H65V5Z" stroke="white" stroke-width="2.5"/>
+        </svg>
+      </a>
+
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="burger-icon">
+            <span></span><span></span><span></span>
+        </label>
+
+        <div class="info">
+            <a href="page1.html">Главная</a>
+            <a href="page2.html">Портфолио</a>
+            <a href="page3.html">Обо мне</a>
+            <a href="page4.html" class="active">Процесс</a>
+            <a href="page5.html">Контакты</a>
+        </div>
+    </div>
+</nav>
+
+<main class="main_cl container">
+    <div class="about-header">
+        <h1 class="large-title">Pабочий Процесс</h1>
+        <p class="subtitle">ИСКУССТВО И РЕМЕСЛО КАЖДОГО КАДРА</p>
+    </div>
+
+    <div class="process-main-image">
+        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200" alt="Process">
+    </div>
+
+    <section class="steps-flow">
+        <div class="process-step">
+            <div class="step-text">
+                <div class="step-header">
+                    <div class="icon-frame-small">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/>
+                        </svg>
+                    </div>
+                    <h2>ВИДЕНЬЕ</h2>
+                </div>
+                <p>Все начинается с видения. Я трачу время на наблюдение за светом, тенями и композицией еще до того, как подниму камеру. Каждый снимок — результат терпения.</p>
+            </div>
+            <div class="step-image">
+                <img src="https://images.unsplash.com/photo-1500673922987-e212871fec22?auto=format&fit=crop&w=600" alt="Vision">
+            </div>
+        </div>
+        <div class="process-step reverse">
+            <div class="step-text">
+                <div class="step-header">
+                    <div class="icon-frame-small">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M12 15a3 3 0 100-6 3 3 0 000 6z"/>
+                        </svg>
+                    </div>
+                    <h2>КАРТИНКА</h2>
+                </div>
+                <p>Использование ручных настроек дает полный творческий контроль. Я фокусируюсь на высококонтрастной черно-белой фотографии, чтобы подчеркнуть форму и текстуру.</p>
+            </div>
+            <div class="step-image">
+                <img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?auto=format&fit=crop&w=600" alt="Capture">
+            </div>
+        </div>
+
+        <div class="process-step">
+            <div class="step-text">
+                <div class="step-header">
+                    <div class="icon-frame-small">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
+                        </svg>
+                    </div>
+                    <h2>Обработка</h2>
+                </div>
+                <p>Цифровая проявка — это современная лаборатория. Я тщательно работаю с экспозицией и контрастом, чтобы добиться той самой глубины черно-белого кадра.</p>
+            </div>
+            <div class="step-image">
+                <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&w=600" alt="Development">
+            </div>
+        </div>
+
+        <div class="process-step reverse">
+            <div class="step-text">
+                <div class="step-header">
+                    <div class="icon-frame-small">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </div>
+                    <h2>Качество</h2>
+                </div>
+                <p>Финальный этап — передача готовой истории. Будь то цифровая галерея или печать на архивной бумаге, качество исполнения остается бескомпромиссным.</p>
+            </div>
+            <div class="step-image">
+                <img src="picture.jpg" alt="Delivery">
+            </div>
+        </div>
+    </section>
+
+    <section class="xml-section">
+        <h2 class="experience-title">Оборудование</h2>
+        <div id="equipment-container" class="values-grid"></div>
+    </section>
+
+    <section class="xml-section">
+        <h2 class="experience-title">Стоимость</h2>
+        <div id="pricing-container" class="pricing-list"></div>
+    </section>
+</main>
+
+<footer class="footer_cl">
+    <div class="container footer_content">
+        <div class="copyright">© 2026 I&D PHOTOGRAPHY. ДУБАЙ, ОАЭ.</div>
+        <div class="socials">
+            <a href="https://www.instagram.com/m_____psh?igsh=MTNwYmw2MXdreTd5cQ%3D%3D&utm_source=qr">ИНСТАГРАМ</a>
+            <a href="https://t.me/fantick26">ТЕЛЕГРАМ</a>
+            <a href="https://vk.ru/m_____psh">ВКОНТАКТЕ</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    async function loadData() {
+        try {
+            const response = await fetch('data.xml');
+            const xmlText = await response.text();
+            const xmlDoc = new DOMParser().parseFromString(xmlText, "text/xml");
+
+            const equipCont = document.getElementById('equipment-container');
+            equipCont.innerHTML = '';
+            xmlDoc.querySelectorAll('category').forEach(cat => {
+                const items = Array.from(cat.querySelectorAll('item'))
+                                   .map(i => `<li>${i.textContent}</li>`)
+                                   .join('');
+                equipCont.innerHTML += `
+                    <div class="value-item">
+                        <h3 class="xml-cat-title">${cat.getAttribute('name')}</h3>
+                        <ul class="xml-list">${items}</ul>
+                    </div>`;
+            });
+
+            const priceCont = document.getElementById('pricing-container');
+            priceCont.innerHTML = '';
+            xmlDoc.querySelectorAll('service').forEach(s => {
+                priceCont.innerHTML += `
+                    <div class="price-item">
+                        <span class="price-name">${s.querySelector('name').textContent}</span>
+                        <b class="price-cost">${s.querySelector('cost').textContent}</b>
+                    </div>`;
+            });
+        } catch (e) {
+            console.error("XML Error:", e);
+        }
+    }
+    window.onload = loadData;
+</script>
+</body>
+</html>

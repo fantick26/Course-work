@@ -1,0 +1,185 @@
+@use 'variables' as v;
+
+.main_cl {
+    padding-top: 140px;
+    padding-bottom: 100px;
+}
+
+.hero-contact {
+    text-align: center;
+    margin-bottom: 100px;
+
+    h1 {
+        font-size: 48px;
+        letter-spacing: 15px;
+        font-weight: 300;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        color: v.$white;
+    }
+
+    p { 
+        font-size: 11px; 
+        color: v.$gray-muted; 
+        letter-spacing: 4px; 
+        text-transform: uppercase;
+    }
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 120px;
+    align-items: start;
+
+    @include v.tablet {
+        grid-template-columns: 1fr;
+        gap: 80px;
+    }
+}
+
+.contact-column {
+    h2 {
+        font-size: 14px;
+        letter-spacing: 6px;
+        margin-bottom: 30px;
+        font-weight: 400;
+        color: v.$white;
+    }
+
+    .description {
+        font-size: 13px;
+        line-height: 1.8;
+        color: v.$gray-muted;
+        margin-bottom: 50px;
+        max-width: 450px;
+    }
+
+    .contact-list {
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            margin-bottom: 35px;
+
+            .icon-square {
+                width: 45px;
+                height: 45px;
+                border: 1px solid v.$gray-dark;
+                @include v.flex-center;
+                color: v.$white;
+                svg { width: 18px; stroke-width: 1.2; }
+            }
+
+            .item-data {
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+
+                strong { 
+                    font-size: 9px; 
+                    letter-spacing: 2px; 
+                    color: v.$gray-muted; 
+                    text-transform: uppercase;
+                }
+                span { 
+                    font-size: 13px; 
+                    color: v.$gray-light; 
+                    letter-spacing: 0.5px;
+                }
+            }
+        }
+    }
+
+    .hours-block {
+        margin-top: 60px;
+        padding-top: 50px;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+
+        .hours-row {
+            @include v.flex-between;
+            font-size: 11px;
+            color: v.$gray-muted;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+            
+            span:last-child {
+                color: v.$white;
+            }
+        }
+    }
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    .field {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        label { 
+            font-size: 10px; 
+            letter-spacing: 3px; 
+            color: v.$gray-muted; 
+        }
+
+        input, select, textarea {
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid v.$gray-dark;
+            padding: 15px 0;
+            color: v.$white;
+            font-family: inherit;
+            font-size: 13px;
+            border-radius: 0;
+            @include v.transition(border-color, 0.4s);
+
+            &:focus { 
+                outline: none; 
+                border-color: v.$white; 
+            }
+
+            &::placeholder {
+                color: #333;
+                font-size: 12px;
+            }
+        }
+
+        select {
+            cursor: pointer;
+            option { background: v.$black; }
+        }
+
+        textarea {
+            resize: none;
+            min-height: 120px;
+        }
+    }
+
+    .btn-send {
+        margin-top: 20px;
+        background: transparent;
+        border: 1px solid v.$white;
+        color: v.$white;
+        padding: 20px;
+        font-size: 11px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        cursor: pointer;
+        @include v.flex-center;
+        gap: 10px;
+        @include v.transition;
+
+        svg { @include v.transition(transform, 0.3s); }
+
+        &:hover { 
+            background: v.$white; 
+            color: v.$black; 
+            
+            svg { transform: translate(3px, -3px); }
+        }
+    }
+}

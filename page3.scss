@@ -1,0 +1,147 @@
+@use 'variables' as v;
+
+.main_cl {
+    padding-top: 120px;
+    padding-bottom: 100px;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 100px;
+
+    .large-title {
+        font-size: clamp(3rem, 10vw, 6rem); 
+        font-weight: 300;
+        margin-bottom: 15px;
+        letter-spacing: 20px;
+        text-transform: uppercase;
+    }
+
+    .subtitle {
+        font-size: 11px;
+        letter-spacing: 5px;
+        color: v.$gray-muted;
+        text-transform: uppercase;
+    }
+}
+
+.bio-section {
+    display: flex;
+    gap: 80px;
+    align-items: flex-start; 
+    margin-bottom: 150px;
+
+    .bio-image { 
+        flex: 1; 
+        img { 
+            width: 100%; 
+            filter: grayscale(100%); 
+            display: block;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    }
+
+    .bio-text { 
+        flex: 1; 
+        h2 { 
+            font-size: 18px; 
+            letter-spacing: 5px; 
+            margin-bottom: 40px; 
+            font-weight: 400;
+            line-height: 1.4;
+        }
+        p { 
+            font-size: 14px; 
+            line-height: 2; 
+            color: v.$gray-light; 
+            margin-bottom: 25px;
+            font-weight: 300;
+        }
+    }
+
+    @include v.tablet {
+        flex-direction: column;
+        gap: 50px;
+    }
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    text-align: center;
+    padding: 100px 0;
+    border-top: 1px solid v.$gray-dark;
+    border-bottom: 1px solid v.$gray-dark;
+    margin-bottom: 150px;
+
+    .icon-frame {
+        width: 70px;
+        height: 70px;
+        border: 1px solid v.$gray-dark;
+        margin: 0 auto 30px;
+        @include v.flex-center;
+        @include v.transition;
+
+        &:hover { border-color: v.$white; }
+        svg { width: 26px; color: v.$white; }
+    }
+
+    .value-item {
+        h3 { font-size: 12px; letter-spacing: 4px; margin-bottom: 20px; text-transform: uppercase; }
+        p { font-size: 11px; color: v.$gray-muted; line-height: 1.8; max-width: 200px; margin: 0 auto; }
+    }
+
+    @include v.tablet { grid-template-columns: repeat(2, 1fr); gap: 60px 20px; }
+    @media (max-width: v.$mobile) { grid-template-columns: 1fr; }
+}
+
+.experience-section {
+    max-width: 900px;
+    margin: 0 auto;
+
+    .experience-title {
+        font-size: 14px;
+        letter-spacing: 8px;
+        text-align: center;
+        margin-bottom: 80px;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+
+    .exp-item {
+        display: flex;
+        padding: 40px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        @include v.transition;
+
+        &:hover { background: rgba(255, 255, 255, 0.02); }
+
+        .exp-year {
+            flex: 0 0 250px;
+            font-size: 11px;
+            letter-spacing: 3px;
+            color: v.$gray-light;
+        }
+
+        .exp-info {
+            h3 {
+                font-size: 13px;
+                letter-spacing: 3px;
+                margin-bottom: 10px;
+                font-weight: 500;
+            }
+            p {
+                font-size: 13px;
+                color: v.$gray-muted;
+                line-height: 1.6;
+            }
+        }
+
+        @include v.tablet {
+            flex-direction: column;
+            gap: 15px;
+            .exp-year { flex: none; }
+        }
+    }
+}

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portfolio>
+    <equipment>
+        <category name="КАМЕРЫ">
+            <item>Leica M10 Monochrom</item>
+            <item>Sony a7R IV</item>
+            <item>Hasselblad 500C/M</item>
+        </category>
+        <category name="ЛИНЗЫ">
+            <item>35mm f/1.4 Summilux</item>
+            <item>50mm f/2.0 Summicron</item>
+            <item>90mm f/2.8 Elmarit</item>
+        </category>
+        <category name="РАБОЧИЕ ПРИЛОЖЕНИЯ">
+            <item>Adobe Lightroom</item>
+            <item>Capture One Pro</item>
+            <item>Silver Efex Pro</item>
+        </category>
+    </equipment>
+    <prices>
+        <service>
+            <name>B&amp;W Уличная фотосессия</name>
+            <cost>$250/час</cost>
+        </service>
+        <service>
+            <name>Личная фотосессия</name>
+            <cost>$1,200/день</cost>
+        </service>
+        <service>
+            <name>Получение фотокарточки (16x20)</name>
+            <cost>$450</cost>
+        </service>
+    </prices>
+</portfolio>
