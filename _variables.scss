@@ -14,7 +14,6 @@ $bg-gray-light: #ccc;
 $bg-container-max: 1200px;
 $bg-tablet: 768px;
 
-// --- МИКСИНЫ ---
 
 @mixin tablet {
     @media (max-width: #{$tablet}) {
